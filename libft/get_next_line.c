@@ -15,9 +15,9 @@
 int				get_next_line(int const fd, char **line)
 {
 	t_data		data;
-	static char	*buf[OPEN_MAX];
+	static char	*buf[37];
 
-	if (!line || fd < 0 || !BUFF_SIZE || fd > OPEN_MAX)
+	if (!line || fd < 0 || !BUFF_SIZE || fd > 37)
 		return (-1);
 	if (buf[fd] == '\0')
 		buf[fd] = ft_strnew(0);
